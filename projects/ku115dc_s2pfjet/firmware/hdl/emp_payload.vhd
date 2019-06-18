@@ -197,7 +197,7 @@ begin
       outJets_69_V => q(69).data(25 downto 0),
       outJets_70_V => q(70).data(25 downto 0),
       outJets_71_V => q(71).data(25 downto 0),
-      outJets_72_V => q(72).data(25 downto 0),
+      outJets_72_V => q(72).data(25 downto 0)
       
       );
 
