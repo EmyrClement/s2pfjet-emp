@@ -1,6 +1,6 @@
 open_project top/top.xpr
 
-set algo "hls_jet_clustering"
+set algo "hls_histogrammer"
 set version 0.1
 
 set dir src/fpga-clustering/FPGAClustering/FPGAClustering/impl/ip/

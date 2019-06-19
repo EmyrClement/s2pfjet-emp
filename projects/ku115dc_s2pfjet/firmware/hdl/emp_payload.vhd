@@ -44,7 +44,7 @@ architecture rtl of emp_payload is
 
 begin
 
-  s2pfjet_algo : entity work.hls_jet_clustering_0
+  s2pfjet_algo : entity work.hls_histogrammer_0
     port map (
       ap_clk => clk,
       ap_rst => rst,
