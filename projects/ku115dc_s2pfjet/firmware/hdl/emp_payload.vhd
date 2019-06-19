@@ -9,9 +9,6 @@ use work.emp_data_types.all;
 use work.emp_device_decl.all;
 use work.mp7_ttc_decl.all;
 
-use work.pf_data_types.all;
-use work.pf_constants.all;
-
 entity emp_payload is
   port(
     clk: in std_logic; -- ipbus signals
