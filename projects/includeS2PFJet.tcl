@@ -3,7 +3,7 @@ open_project top/top.xpr
 set algo "hls_histogrammer"
 set version 0.1
 
-set dir src/hls_histogrammer/HLS_Histogrammer/KU115/impl/ip/
+set dir ../../src/hls_histogrammer/HLS_Histogrammer/KU115/impl/ip
 set modName ${algo}_0
 
 set ipRepoDir user_ip_repo
