@@ -1,7 +1,7 @@
 open_project top/top.xpr
 
 set algo "jet_trigger_chain"
-set version 0.1
+set version 1.0
 
 set dir ../../src/
 set modName ${algo}_0
