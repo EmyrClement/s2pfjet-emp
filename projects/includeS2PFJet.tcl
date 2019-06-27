@@ -1,9 +1,9 @@
 open_project top/top.xpr
 
-set algo "hls_histogrammer"
+set algo "jet_trigger_chain"
 set version 0.1
 
-set dir ../../src/hls_histogrammer/HLS_Histogrammer/KU115/impl/ip
+set dir ../../src/
 set modName ${algo}_0
 
 set ipRepoDir user_ip_repo
@@ -11,7 +11,7 @@ file mkdir $ipRepoDir
 set_property  ip_repo_paths  $ipRepoDir [current_project]
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
-update_ip_catalog -add_ip "$dir/cern-cms_hls_${algo}_[string map { . _ } ${version}].zip" -repo_path $ipRepoDir
+update_ip_catalog -add_ip "$dir/jet_trigger_chain.zip" -repo_path $ipRepoDir
 
 create_ip -name ${algo} -vendor cern-cms -library hls -version ${version} -module_name ${modName}
 generate_target {instantiation_template} [get_files top/top.srcs/sources_1/ip/${modName}/${modName}.xci]
