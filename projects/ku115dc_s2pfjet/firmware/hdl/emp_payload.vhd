@@ -32,13 +32,6 @@ end emp_payload;
 
 architecture rtl of emp_payload is
 
-  signal start: std_logic;
-  signal done: std_logic;
-  signal idle: std_logic;
-  signal ready: std_logic;
-  signal rst_loc_reg : std_logic_vector(N_REGION - 1 downto 0);       
-  constant N_FRAMES_USED : natural := 1;
-
 begin
 
   s2pfjet_algo : entity work.jet_trigger_chain_wrapper_0
@@ -94,17 +87,6 @@ begin
   
   ipb_out <= IPB_RBUS_NULL;
   
-  -- TODO this is temporary, while isolating segfault
-  --gDummy : for i in N_PF_IP_CORE_IN_CHANS - 1 downto 0 generate
-  --  d_pf(0)(i) <= d(i).data(31 downto 0);
-  --end generate;
-  
-  --gDummy2 : for i in N_PF_IP_CORE_OUT_CHANS - 1 downto 0 generate
-  --   q(i).data(31 downto 0) <= q_pf(0)(i);
-  --end generate;
-
-
-
   bc0 <= '0';
   gpio <= (others => '0');
   gpio_en <= (others => '0');
