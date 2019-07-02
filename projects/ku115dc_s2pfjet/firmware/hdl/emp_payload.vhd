@@ -37,25 +37,11 @@ architecture rtl of emp_payload is
 begin
 
   ipb_out <= IPB_RBUS_NULL;
-
-  selector_gen : process (clk_p)
-  begin  -- process selector_gen
-    if clk_p'event and clk_p = '1' then  -- rising clock edge
-      rst_loc_reg <= rst_loc;
-    end if;
-  end process selector_gen;
-
-  start_jet(0) <= '1';
   
   s2pfjet_algo : entity work.jet_ip_wrapper
     port map (
       clk    => clk_p,
-      rst    => rst_loc(0),
-      start  => start_jet(0),
       input  => d(71 downto 0),
-      done   => open,
-      idle   => open,
-      ready  => open,
       output => q(71 downto 0)
       );
   

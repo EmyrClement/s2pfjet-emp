@@ -1,4 +1,5 @@
 src emp_payload.vhd
+src jet_ip_wrapper.vhd
 include -c emp-fwk:boards/serenity/dc_ku115/ dc_ku115_so1.dep
 src ku115dc_decl.vhd 
 src -c ipbus-firmware:components/ipbus_slaves ipbus_reg_v.vhd ipbus_ctrlreg_v.vhd ipbus_reg_types.vhd
