@@ -32,60 +32,32 @@ end emp_payload;
 
 architecture rtl of emp_payload is
 
+  signal start_jet : std_logic_vector(0 downto 0) := (others => '1');
+  
 begin
 
-  s2pfjet_algo : entity work.jet_trigger_chain_wrapper_0
-    port map (
-      in_clock_240MHz => clk,
-      inReset_0 => rst,
-      barrel_inputs_0_0 => d(0).data(29 downto 0),
-      barrel_inputs_1_0 => d(1).data(29 downto 0),
-      barrel_inputs_2_0 => d(2).data(29 downto 0),
-      barrel_inputs_3_0 => d(3).data(29 downto 0),
-      barrel_inputs_4_0 => d(4).data(29 downto 0),
-      barrel_inputs_5_0 => d(5).data(29 downto 0),
-      barrel_inputs_6_0 => d(6).data(29 downto 0),
-      barrel_inputs_7_0 => d(7).data(29 downto 0),
-      barrel_inputs_8_0 => d(8).data(29 downto 0),
-      barrel_inputs_9_0 => d(9).data(29 downto 0),
-      barrel_inputs_10_0 => d(10).data(29 downto 0),
-      barrel_inputs_11_0 => d(11).data(29 downto 0),
-      barrel_inputs_12_0 => d(12).data(29 downto 0),
-      barrel_inputs_13_0 => d(13).data(29 downto 0),
-      barrel_inputs_14_0 => d(14).data(29 downto 0),
-      barrel_inputs_15_0 => d(15).data(29 downto 0),
-      barrel_inputs_16_0 => d(16).data(29 downto 0),
-      barrel_inputs_17_0 => d(17).data(29 downto 0),
-      barrel_inputs_18_0 => d(18).data(29 downto 0),
-      barrel_inputs_19_0 => d(19).data(29 downto 0),
-      barrel_inputs_20_0 => d(20).data(29 downto 0),
-      barrel_inputs_21_0 => d(21).data(29 downto 0),
-      barrel_inputs_22_0 => d(22).data(29 downto 0),
-      barrel_inputs_23_0 => d(23).data(29 downto 0),
-      
-      outJets_0_0 => q(0).data(25 downto 0),
-      outJets_1_0 => q(1).data(25 downto 0),
-      outJets_2_0 => q(2).data(25 downto 0),
-      outJets_3_0 => q(3).data(25 downto 0),
-      outJets_4_0 => q(4).data(25 downto 0),
-      outJets_5_0 => q(5).data(25 downto 0),
-      outJets_6_0 => q(6).data(25 downto 0),
-      outJets_7_0 => q(7).data(25 downto 0),
-      outJets_8_0 => q(8).data(25 downto 0),
-      outJets_9_0 => q(9).data(25 downto 0),
-      outJets_10_0 => q(10).data(25 downto 0),
-      outJets_11_0 => q(11).data(25 downto 0),
-      outJets_12_0 => q(12).data(25 downto 0),
-      outJets_13_0 => q(13).data(25 downto 0),
-      outJets_14_0 => q(14).data(25 downto 0),
-      outJets_15_0 => q(15).data(25 downto 0),
-      outJets_16_0 => q(16).data(25 downto 0),
-      outJets_17_0 => q(17).data(25 downto 0)
-      
-      );
-  
-  
   ipb_out <= IPB_RBUS_NULL;
+
+  selector_gen : process (clk_p)
+  begin  -- process selector_gen
+    if clk_p'event and clk_p = '1' then  -- rising clock edge
+      rst_loc_reg <= rst_loc;
+    end if;
+  end process selector_gen;
+
+  start_jet(0) <= '1';
+  
+  s2pfjet_algo : entity work.jet_ip_wrapper
+    port map (
+      clk    => clk_p,
+      rst    => rst_loc(0),
+      start  => start_jet(0),
+      input  => d(71 downto 0),
+      done   => open,
+      idle   => open,
+      ready  => open,
+      output => q(71 downto 0)
+      );
   
   bc0 <= '0';
   gpio <= (others => '0');
