@@ -23,7 +23,8 @@ begin
 
   s2pfjet_algo : entity work.jet_trigger_chain_wrapper_0
     port map (
-      in_clock_240MHz => clk,    
+      in_clock_240MHz => clk,
+      inReset_0 => rst,
       barrel_inputs_0_0 => input(0).data, 
       barrel_inputs_1_0 => input(1).data, 
       barrel_inputs_2_0 => input(2).data, 

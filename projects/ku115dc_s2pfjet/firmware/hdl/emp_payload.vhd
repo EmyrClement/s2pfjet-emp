@@ -41,6 +41,7 @@ begin
   s2pfjet_algo : entity work.jet_ip_wrapper
     port map (
       clk    => clk_p,
+      rst    => rst_loc(0),
       input  => d(71 downto 0),
       output => q(71 downto 0)
       );
