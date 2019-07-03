@@ -6,7 +6,12 @@ use work.emp_data_types.all;
 entity jet_ip_wrapper is
   port (
     clk: in std_logic;
+    rst: in std_logic;
+    start: in std_logic;
     input: in ldata(71 downto 0);
+    done: out std_logic;
+    idle: out std_logic;
+    ready: out std_logic;
     output : out ldata(71 downto 0)
     );
   
@@ -19,6 +24,11 @@ begin
   s2pfjet_algo : entity work.hls_delay_0
     port map (
       ap_clk => clk,
+      ap_rst => rst,
+      ap_start => start, -- ??
+      ap_done => done, -- ??
+      ap_idle => idle, -- ??
+      ap_ready => ready, -- ??
       inData_0 => input(0).data(7 downto 0),
       inData_1 => input(1).data(7 downto 0),
       inData_2 => input(2).data(7 downto 0),
