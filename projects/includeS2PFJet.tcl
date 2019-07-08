@@ -1,6 +1,6 @@
 open_project top/top.xpr
 
-set algo "hls_delay"
+set algo "jet_trigger_chain_wrapper"
 set version 1.0
 
 set dir ../../src/
@@ -11,7 +11,7 @@ file mkdir $ipRepoDir
 set_property  ip_repo_paths  $ipRepoDir [current_project]
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
-update_ip_catalog -add_ip "$dir/VivadoPlayground/HLS_Delay/KU115/impl/ip/cern-cms_hls_hls_delay_1_0.zip" -repo_path $ipRepoDir
+update_ip_catalog -add_ip "$dir/phase-2-jet-trigger-chain/HLS_Phase2TriggerChain/KU115/impl/ip/cern-cms_hls_hls_delay_1_0.zip" -repo_path $ipRepoDir
 create_ip -name ${algo} -vendor cern-cms -library hls -version ${version} -module_name ${modName}
 generate_target {instantiation_template} [get_files top/top.srcs/sources_1/ip/${modName}/${modName}.xci]
 generate_target all [get_files top/top.srcs/sources_1/ip/${modName}/${modName}.xci]
