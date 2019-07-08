@@ -32,13 +32,9 @@ end emp_payload;
 
 architecture rtl of emp_payload is
 
-  signal start_pfjet : std_logic_vector(0 downto 0) := (others => '1');
-  
 begin
 
   ipb_out <= IPB_RBUS_NULL;
-
-  start_pfjet(0) <= '1';
   
   s2pfjet_algo : entity work.jet_ip_wrapper
     port map (

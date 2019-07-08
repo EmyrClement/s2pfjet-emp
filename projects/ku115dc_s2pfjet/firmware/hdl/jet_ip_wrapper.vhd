@@ -7,11 +7,7 @@ entity jet_ip_wrapper is
   port (
     clk: in std_logic;
     rst: in std_logic;
-    start: in std_logic;
     input: in ldata(71 downto 0);
-    done: out std_logic;
-    idle: out std_logic;
-    ready: out std_logic;
     output : out ldata(71 downto 0)
     );
   
