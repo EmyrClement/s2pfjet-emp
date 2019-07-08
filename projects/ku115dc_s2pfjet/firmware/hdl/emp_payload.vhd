@@ -44,11 +44,7 @@ begin
     port map (
       clk    => clk_p,
       rst    => rst_loc(0),
-      start  => start_pfjet(0),
       input  => d(71 downto 0),
-      done   => open,
-      idle   => open,
-      ready  => open,
       output => q(71 downto 0)
       );
   
