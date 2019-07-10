@@ -1,5 +1,3 @@
-open_project top/top.xpr
-
 set algo "jet_trigger_chain_wrapper"
 set version 1.0
 
