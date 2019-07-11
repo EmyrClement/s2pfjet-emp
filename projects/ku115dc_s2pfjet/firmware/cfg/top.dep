@@ -5,4 +5,4 @@ src ku115dc_decl.vhd
 src -c ipbus-firmware:components/ipbus_slaves ipbus_reg_v.vhd ipbus_ctrlreg_v.vhd ipbus_reg_types.vhd
 src -c ipbus-firmware:components/ipbus_core ipbus_package.vhd ipbus_fabric_sel.vhd
 setup build.tcl
-setup includeS2PFJet.tcl
+#setup includeS2PFJet.tcl
