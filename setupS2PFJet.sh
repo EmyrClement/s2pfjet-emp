@@ -15,7 +15,7 @@ vivado_hls Phase2JetTrigger_ExportIP.tcl
 source GetIPs.sh
 vivado -mode batch -source jet_trigger_chain.tcl
 cd ../../
-runCmd 'ipbb proj create vivado s2PFJetClust s2pfjet-emp:projects/ku115dc_s2pfjet  -t top.dep'
+ipbb proj create vivado s2PFJetClust s2pfjet-emp:projects/ku115dc_s2pfjet  -t top.dep
 cd proj/s2PFJetClust
 ipbb vivado project
 ipbb vivado synth -j4 impl -j4
