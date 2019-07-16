@@ -1,5 +1,5 @@
 set algo "hls_histogrammer"
-set version 0.2
+set version 0.1
 
 set dir ../../src/
 set modName ${algo}_0
