@@ -8,8 +8,8 @@ cd s2PFJet
 ipbb add git https://:@gitlab.cern.ch:8443/p2-xware/firmware/emp-fwk.git -b v0.2.3
 ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/firmware/mp7.git -b ephemeral/phase2-vC
 ipbb add git https://github.com/ipbus/ipbus-firmware -b v1.3
-ipbb add git https://:@gitlab.cern.ch:8443/sbologna/phase-2-jet-trigger-chain.git -b manual_pack_unpack
-ipbb add git https://github.com/bundocka/s2pfjet-emp.git -b fullChainNew
+ipbb add git https://:@gitlab.cern.ch:8443/sbologna/phase-2-jet-trigger-chain.git -b 0.5
+ipbb add git https://github.com/bundocka/s2pfjet-emp.git
 cd src/phase-2-jet-trigger-chain/
 vivado_hls Phase2JetTrigger_ExportIP.tcl
 source GetIPs.sh
