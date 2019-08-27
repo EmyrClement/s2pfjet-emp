@@ -20,7 +20,7 @@ begin
   s2pfjet_algo : entity work.jet_trigger_chain_wrapper_0
     port map (
       in_clock_240MHz => clk,     
-      inReset_0 => rst,
+      d0Valid_0 => rst,
       
       barrel_inputs_0_0 => input(0).data,
       barrel_inputs_1_0 => input(1).data,
@@ -47,24 +47,24 @@ begin
       barrel_inputs_22_0 => input(22).data,
       barrel_inputs_23_0 => input(23).data,
 
-      outJets_0_0 => output(0).data,
-      outJets_1_0 => output(1).data,
-      outJets_2_0 => output(2).data,
-      outJets_3_0 => output(3).data,
-      outJets_4_0 => output(4).data,
-      outJets_5_0 => output(5).data,
-      outJets_6_0 => output(6).data,
-      outJets_7_0 => output(7).data,
-      outJets_8_0 => output(8).data,
-      outJets_9_0 => output(9).data,
-      outJets_10_0 => output(10).data,
-      outJets_11_0 => output(11).data,
-      outJets_12_0 => output(12).data,
-      outJets_13_0 => output(13).data,
-      outJets_14_0 => output(14).data,
-      outJets_15_0 => output(15).data,
-      outJets_16_0 => output(16).data,
-      outJets_17_0 => output(17).data
+      outBins_0_V => output(0).data(15 downto 0),
+      outBins_10_V => output(1).data(15 downto 0),
+      outBins_11_V => output(2).data(15 downto 0),
+      outBins_12_V => output(3).data(15 downto 0),
+      outBins_13_V => output(4).data(15 downto 0),
+      outBins_14_V => output(5).data(15 downto 0),
+      outBins_15_V => output(6).data(15 downto 0),
+      outBins_16_V => output(7).data(15 downto 0),
+      outBins_17_V=> output(8).data(15 downto 0),
+      outBins_1_V => output(9).data(15 downto 0),
+      outBins_2_V => output(10).data(15 downto 0),
+      outBins_3_V => output(11).data(15 downto 0),
+      outBins_4_V => output(12).data(15 downto 0),
+      outBins_5_V => output(13).data(15 downto 0),
+      outBins_6_V => output(14).data(15 downto 0),
+      outBins_7_V => output(15).data(15 downto 0),
+      outBins_8_V => output(16).data(15 downto 0),
+      outBins_9_V => output(17).data(15 downto 0)
       
       );
 
