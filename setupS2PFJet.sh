@@ -6,9 +6,8 @@ source ~/ipbb-0.5.2/env.sh
 ipbb init s2PFJet
 cd s2PFJet
 ipbb add git https://:@gitlab.cern.ch:8443/p2-xware/firmware/emp-fwk.git -b v0.3.0
-ipbb add git https://gitlab.cern.ch/ttc/legacy_ttc.git -b v2.1
 ipbb add git https://github.com/ipbus/ipbus-firmware -b v1.5
-ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/firmware/mp7.git -b ephemeral/phase2-vC
+ipbb add git https://gitlab.cern.ch/ttc/legacy_ttc.git -b v2.1
 ipbb add git https://:@gitlab.cern.ch:8443/sbologna/phase-2-jet-trigger-chain.git -b 0.10
 ipbb add git https://github.com/bundocka/s2pfjet-emp.git
 cd src/phase-2-jet-trigger-chain/
