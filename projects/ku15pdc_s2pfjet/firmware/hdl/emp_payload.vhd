@@ -3,11 +3,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 use work.ipbus.all;
 use work.emp_data_types.all;
-use work.top_decl.all;
 
 use work.emp_data_types.all;
 use work.emp_device_decl.all;
-use work.mp7_ttc_decl.all;
+use work.emp_ttc_decl.all;
 
 entity emp_payload is
   port(
