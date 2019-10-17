@@ -37,8 +37,6 @@ begin
 
   ipb_out <= IPB_RBUS_NULL;
 
-  rst_algo <= '0';
-  
   magic_reset : process (clk_p)
   begin
     if rising_edge(clk) then
