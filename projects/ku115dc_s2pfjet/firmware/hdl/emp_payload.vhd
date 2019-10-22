@@ -31,14 +31,28 @@ end emp_payload;
 
 architecture rtl of emp_payload is
 
+  signal rst_algo: std_logic; 
+  
 begin
 
   ipb_out <= IPB_RBUS_NULL;
+
+  magic_reset : process (clk_p)
+  begin
+    if rising_edge(clk) then
+      if d(0).data = X"51091AA40951309E" then
+        rst_algo <= '1';
+      else
+        rst_algo <= '0';
+      end if;
+    end if;
+  end process magic_reset;
+
   
   s2pfjet_algo : entity work.jet_ip_wrapper
     port map (
       clk    => clk_p,
-      rst    => rst_loc(0),
+      rst    => rst_algo,
       input  => d(71 downto 0),
       output => q(71 downto 0)
       );
