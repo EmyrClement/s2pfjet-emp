@@ -22,43 +22,51 @@ begin
       in_clock_360MHz => clk,     
       d0Valid => rst,
       
-      inChargedInputs_0  => input(0).data,
-      inChargedInputs_1  => input(1).data,
-      inChargedInputs_10 => input(2).data,
-      inChargedInputs_11 => input(3).data,
-      inChargedInputs_12 => input(4).data,
-      inChargedInputs_13 => input(5).data,
-      inChargedInputs_2  => input(6).data,
-      inChargedInputs_3  => input(7).data,
-      inChargedInputs_4  => input(8).data,
-      inChargedInputs_5  => input(9).data,
-      inChargedInputs_6  => input(10).data,
-      inChargedInputs_7  => input(11).data,
-      inChargedInputs_8  => input(12).data,
-      inChargedInputs_9  => input(13).data,
-      inMuonInputs_0     => input(14).data,
-      inMuonInputs_1     => input(15).data,
-      inNeutralInputs_0  => input(16).data,
-      inNeutralInputs_1  => input(17).data,
-      inNeutralInputs_2  => input(18).data,
-      inNeutralInputs_3  => input(19).data,
-      inNeutralInputs_4  => input(20).data,
-      inNeutralInputs_5  => input(21).data,
-      inNeutralInputs_6  => input(22).data,
-      inNeutralInputs_7  => input(23).data,
-      inNeutralInputs_8  => input(24).data,
-      inNeutralInputs_9  => input(25).data,
-      inPhotonInputs_0   => input(26).data,
-      inPhotonInputs_1   => input(27).data,
-      inPhotonInputs_2   => input(28).data,
-      inPhotonInputs_3   => input(29).data,
-      inPhotonInputs_4   => input(30).data,
-      inPhotonInputs_5   => input(31).data,
-      inPhotonInputs_6   => input(32).data,
-      inPhotonInputs_7   => input(33).data,
-      inPhotonInputs_8   => input(34).data,
-      inPhotonInputs_9   => input(35).data,
-                        
+      inChargedInputs_0  => input(40).data,
+      inChargedInputs_1  => input(41).data,
+      inChargedInputs_2  => input(42).data,
+      inChargedInputs_3  => input(43).data,
+      inChargedInputs_4  => input(44).data,
+      inChargedInputs_5  => input(45).data,
+      inChargedInputs_6  => input(46).data,
+      inChargedInputs_7  => input(47).data,
+      inChargedInputs_8  => input(48).data,
+      inChargedInputs_9  => input(49).data,
+      
+      inMuonInputs_0     => input(50).data,
+      inMuonInputs_1     => input(51).data,
+      inNeutralInputs_0  => input(52).data,
+      inNeutralInputs_1  => input(53).data,
+      inNeutralInputs_2  => input(54).data,
+      inNeutralInputs_3  => input(55).data,
+      inNeutralInputs_4  => input(56).data,
+
+      inPhotonInputs_0   => input(57).data,
+      inPhotonInputs_1   => input(58).data,
+      inPhotonInputs_2   => input(59).data,
+      inPhotonInputs_3   => input(60).data,
+      inPhotonInputs_4   => input(61).data,
+      inPhotonInputs_5   => input(62).data,
+      inPhotonInputs_6   => input(63).data,
+
+      inChargedInputs_10 => input(0).data,
+      inChargedInputs_11 => input(1).data,
+      inChargedInputs_12 => input(2).data,
+      inChargedInputs_13 => input(3).data,
+
+      inNeutralInputs_5  => input(4).data,
+      inNeutralInputs_6  => input(5).data,
+      inNeutralInputs_7  => input(6).data,
+      inNeutralInputs_8  => input(7).data,
+      inNeutralInputs_9  => input(8).data,
+      
+                                  
+      inPhotonInputs_7   => input(9).data,
+      inPhotonInputs_8   => input(10).data,
+      inPhotonInputs_9   => input(11).data,
+
+
+                                  
       outJets_0 => output(0).data,
       outJets_1 => output(1).data,
       outJets_2 => output(2).data,
@@ -68,6 +76,8 @@ begin
       outJets_6 => output(6).data,
       outJets_7 => output(7).data,
       outJets_8 => output(8).data
+
+
       
       );
 
