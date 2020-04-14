@@ -37,16 +37,16 @@ begin
 
   ipb_out <= IPB_RBUS_NULL;
 
-  magic_reset : process (clk_p)
-  begin
-    if rising_edge(clk_p) then
-      if d(48).data = X"51091AA40951309E" then
-        rst_algo <= '1';
-      else
-        rst_algo <= '0';
-      end if;
-    end if;
-  end process magic_reset;
+#  magic_reset : process (clk_p)
+#  begin
+#    if rising_edge(clk_p) then
+#      if d(48).data = X"51091AA40951309E" then
+#        rst_algo <= '1';
+#      else
+#        rst_algo <= '0';
+#      end if;
+#    end if;
+#  end process magic_reset;
 
   
   s2pfjet_algo : entity work.jet_ip_wrapper
