@@ -39,7 +39,7 @@ begin
 
   magic_reset : process (clk_p)
   begin
-    if rising_edge(clk) then
+    if rising_edge(clk_p) then
       if d(0).data = X"51091AA40951309E" then
         rst_algo <= '1';
       else
