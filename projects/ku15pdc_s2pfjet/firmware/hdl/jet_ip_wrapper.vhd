@@ -40,13 +40,6 @@ begin
       barrel_inputs_15_0  => input(15).data,
       barrel_inputs_16_0  => input(16).data,
       barrel_inputs_17_0  => input(17).data,
-      barrel_inputs_18_0  => input(18).data,
-      barrel_inputs_19_0  => input(19).data,
-      barrel_inputs_20_0  => input(20).data,
-      barrel_inputs_21_0  => input(21).data,
-      barrel_inputs_22_0  => input(22).data,
-      barrel_inputs_23_0  => input(23).data,
-     
                         
       outJets_0_0 => output(0).data,
       outJets_1_0 => output(1).data,
